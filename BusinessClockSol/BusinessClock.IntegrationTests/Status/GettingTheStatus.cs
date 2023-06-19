@@ -1,6 +1,6 @@
-﻿using Alba;
+﻿
+using Alba;
 using BusinessClockAPi.Models;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 using System.Net;
 
 namespace BusinessClock.IntegrationTests.Status;
