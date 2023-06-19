@@ -1,6 +1,5 @@
 ﻿using Alba;
 using BusinessClockAPi.Models;
-using BusinessClockAPi.Models;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using System.Net;
 
