@@ -1,4 +1,9 @@
-﻿// // See https://aka.ms/new-console-template for more information
-// Console.WriteLine("Hello, World!");
+﻿using Microsoft.AspNetCore;
 
-var builder = new WebApplicatoin.CreateBuilder
+var builder = new WebApplication.CreateBuilder(args);
+
+
+
+var app = builder.Build();
+
+app.Run();
