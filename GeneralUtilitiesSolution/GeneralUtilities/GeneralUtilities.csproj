@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Title>General Utility Stuff</Title>
+    <PackageId>Hypertheory.GeneralUtilities</PackageId>
+    <PackageOutputPath>C:\libs</PackageOutputPath>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>true</ImplicitUsings> <!--This allows us to use the namspaces without having to put them in our cs file-->
+    </PropertyGroup>
+
+</Project>
