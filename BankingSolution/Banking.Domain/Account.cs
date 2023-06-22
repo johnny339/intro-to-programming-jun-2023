@@ -13,13 +13,15 @@
             return _balance;
         }
 
+
+
         public void Withdrawl(decimal amountToWithdrawl)
         {
             if (amountToWithdrawl > _balance)
             {
-                return; 
+                throw new OverdraftException();
             }
-            _balance = _balance - amountToWithdrawl;
+            _balance -= amountToWithdrawl;
         }
     }
 }
