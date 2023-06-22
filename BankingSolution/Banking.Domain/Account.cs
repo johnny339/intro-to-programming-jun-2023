@@ -3,7 +3,7 @@
     public class Account
     {
         private decimal _balance = 5000;
-        public void Deposit(decimal amountToDeposit)
+        public virtual void Deposit(decimal amountToDeposit) // 'virtual' is used to allow a method to be modified
         {
             _balance = _balance + amountToDeposit;
         }
