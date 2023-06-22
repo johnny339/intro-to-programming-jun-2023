@@ -3,9 +3,23 @@
 namespace Banking.UnitTests.BankAccount;
 public class GoldCustomersGetABonusOnDeposits
 {
-    [Fact(Skip = "Working on it")] // this skips the test, maybe because this test will fail until finally complete
+    [Fact] 
     public void BonusIsApplied()
     {
+        // given 
+        // the context for this test
+        var account = new Account();
+        account.AccountType = LoyaltyLevel.Gold;
+        var openingBalance = account.GetBalance(); //query 
+        var amountToDeposit = 100m;
+        var expectedNewBalance = openingBalance + amountToDeposit + 10m;
+
+        // when - what are we testing
+        account.Deposit(amountToDeposit);
+
+        //then - how do we know it worked?
+        Assert.Equal(expectedNewBalance, account.GetBalance());
+
 
     }
 }
