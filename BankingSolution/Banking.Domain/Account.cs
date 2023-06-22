@@ -2,12 +2,19 @@
 
 public class Account
 {
+    // this is tight coupling. we are creating a NEW instance of a System.Decmal
     private decimal _balance = 5000; // Fields class level variable
+    private ICanCalculateBonuses _bonusCalculator;
+
+    public Account(ICanCalculateBonuses bonusCalculator)
+    {
+        _bonusCalculator = bonusCalculator;
+    }
+
     public void Deposit(decimal amountToDeposit)
     {
 
-        var bonusCalculator = new StandardBonusCalculator();
-        decimal bonus = bonusCalculator.CalculateBonusForDepositOn(_balance, amountToDeposit);
+        decimal bonus = _bonusCalculator.CalculateBonusForDepositOn(_balance, amountToDeposit);
 
         _balance += amountToDeposit + bonus;
     }

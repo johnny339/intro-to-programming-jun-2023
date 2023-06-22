@@ -2,19 +2,23 @@
 
 
 
-namespace Banking.UnitTests.BankAccount
+using Banking.UnitTests.TestDoubles;
+
+namespace Banking.UnitTests.BankAccount;
+
+public class NewAccounts
 {
-    public class NewAccounts
+    [Fact]
+    public void NewAccountsHaveCorrectBalance()
     {
-        [Fact]
-        public void NewAccountsHaveCorrectBalance()
-        {
-            //given
-            Account account = new Account();
-            //when
-            decimal balance = account.GetBalance();
-            //then
-            Assert.Equal(5000, balance);
-        }
+        // Given
+        //   Account account = new Account(new DummyBonusCalculator());
+        Account account = new Account(new Mock<ICanCalculateBonuses>().Object);
+
+        // When
+        decimal balance = account.GetBalance();
+
+        // Then
+        Assert.Equal(5000, balance);
     }
 }
